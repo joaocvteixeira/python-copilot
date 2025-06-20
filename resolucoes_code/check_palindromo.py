@@ -14,31 +14,43 @@
 # linkedin.com/in/joaocvteixeira
 
 # 🎯 Objetivo do código:
-# O objetivo deste código é solicitar ao usuário que insira uma string e um número inteiro,
-# armazenar essas informações em variáveis, e exibi-las no console repetindo a string
-# o número de vezes especificado, separadas por espaços. Este exemplo é útil para entender
-# conceitos básicos de entrada e saída em Python.
+# O objetivo deste código é solicitar ao usuário que insira uma palavra,
+# verificar se essa palavra é um palíndromo e exibir o resultado no console.
+# Este exemplo é útil para entender conceitos básicos de manipulação de strings em Python.
+
+# 📚 O que é um palíndromo?
+# Um palíndromo é uma palavra, frase, número ou qualquer outra sequência de caracteres
+# que lê da mesma forma de trás para frente (ignorando espaços, pontuação e diferenças de maiúsculas/minúsculas).
+# Exemplos de palíndromos incluem "radar", "level", "rotor".
 
 # 🤔 Uma string é uma sequência de caracteres, como palavras ou frases. 
 # No Python, strings são delimitadas por aspas simples ('') ou duplas ("").
 
 # 🔡 Variável: Uma variável é um espaço na memória que armazena um valor.
-# No código abaixo, 'string_input' e 'numero_inteiro' são variáveis que armazenam
-# as entradas fornecidas pelo usuário.
+# Em Python, você pode criar uma variável simplesmente atribuindo um valor a um nome usando o operador de atribuição (=).
+# Exemplo: nome_da_variavel = valor
+# No código abaixo, a variável 'palavra' armazena a entrada do usuário.
 
-# ⌨️ Solicitação das entradas de dados do usuário
+# ⌨️ Solicitação da entrada de dados do usuário
 # A função input() é usada para capturar a entrada do usuário.
 # O texto dentro dos parênteses é exibido como um prompt para o usuário.
-string_input = input("Digite uma string: ")
-numero_inteiro = int(input("Digite um número inteiro: "))
+palavra = input("Digite uma palavra: ")
 
-# 🔁 Repete a string o número de vezes especificado, separadas por espaços
-resultado = (string_input + " ") * numero_inteiro
+# 🔄 Inverte a string
+# A sintaxe [::-1] é usada para inverter a string.
+palavra_invertida = palavra[::-1]
 
-# 🖨️ Exibe a string repetida
+# 🔍 Verifica se a palavra é um palíndromo
+# Compara a string original com sua versão invertida.
+if palavra == palavra_invertida:
+    resultado = "A palavra é um palíndromo."
+else:
+    resultado = "A palavra não é um palíndromo."
+
+# 🖨️ Exibe o resultado da verificação
 # A função print() é usada para exibir a saída no console.
 # Console é a interface onde os resultados do código são exibidos.
-print("Resultado:", resultado.strip())
+print(resultado)
 
 # ▶️ Como rodar este código:
 # 1. Requer instalar Python:
@@ -49,9 +61,9 @@ print("Resultado:", resultado.strip())
 # 3. Abra o terminal integrado pressionando `Ctrl + `` (Ctrl + acento grave) ou indo em `Terminal` > `Novo Terminal`
 #    geralmente encontrado na parte superior da tela. Certifique-se que o terminal está definido para Python
 #    (e não PowerShell por exemplo...)
-# 4. Navegue até o diretório onde o arquivo `repet_txt.py` está localizado usando o comando `cd`.
+# 4. Navegue até o diretório onde o arquivo `check_palindromo.py` está localizado usando o comando `cd`.
 #    Exemplo: cd C:/Users/usuário/OneDrive/Desktop
 # 5. Execute o código Python usando o comando `python` seguido do nome do arquivo.
-#    Exemplo: python repet_txt.py
-# 6. Interaja com o programa inserindo uma string e um número inteiro quando solicitado.
+#    Exemplo: python check_palindromo.py
+# 6. Interaja com o programa inserindo uma palavra quando solicitado.
 # 7. Veja o resultado exibido no console.

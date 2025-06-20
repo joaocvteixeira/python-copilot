@@ -14,31 +14,37 @@
 # linkedin.com/in/joaocvteixeira
 
 # 🎯 Objetivo do código:
-# O objetivo deste código é solicitar ao usuário que insira uma string e um número inteiro,
-# armazenar essas informações em variáveis, e exibi-las no console repetindo a string
-# o número de vezes especificado, separadas por espaços. Este exemplo é útil para entender
-# conceitos básicos de entrada e saída em Python.
+# O objetivo deste código é solicitar ao usuário que insira um número inteiro,
+# verificar se esse número é par ou ímpar e exibir o resultado no console.
+# Este exemplo é útil para entender conceitos básicos de utilização de condicionais em Python.
 
 # 🤔 Uma string é uma sequência de caracteres, como palavras ou frases. 
 # No Python, strings são delimitadas por aspas simples ('') ou duplas ("").
 
 # 🔡 Variável: Uma variável é um espaço na memória que armazena um valor.
-# No código abaixo, 'string_input' e 'numero_inteiro' são variáveis que armazenam
-# as entradas fornecidas pelo usuário.
+# No Python, as variáveis são criadas automaticamente quando você atribui um valor a elas.
+# Por exemplo, `numero` é uma variável que armazena o valor inserido pelo usuário.
 
-# ⌨️ Solicitação das entradas de dados do usuário
+# ⌨️ Solicitação da entrada de dados do usuário
 # A função input() é usada para capturar a entrada do usuário.
 # O texto dentro dos parênteses é exibido como um prompt para o usuário.
-string_input = input("Digite uma string: ")
-numero_inteiro = int(input("Digite um número inteiro: "))
+# int(): Converte uma string ou número em um número inteiro.
+numero = int(input("Digite um número inteiro: "))
 
-# 🔁 Repete a string o número de vezes especificado, separadas por espaços
-resultado = (string_input + " ") * numero_inteiro
+# 🔢 Verifica se o número é par ou ímpar
+# O operador de módulo (%) retorna o resto da divisão de um número pelo outro.
+# Se o resto da divisão de um número por 2 for 0, o número é par. Caso contrário, é ímpar.
+# if: Verifica uma condição. Se a condição for verdadeira, o bloco de código associado ao if será executado.
+if numero % 2 == 0:
+    resultado = "O número é par."
+# else: Executa um bloco de código se a condição do if for falsa.
+else:
+    resultado = "O número é ímpar."
 
-# 🖨️ Exibe a string repetida
+# 🖨️ Exibe o resultado da verificação
 # A função print() é usada para exibir a saída no console.
 # Console é a interface onde os resultados do código são exibidos.
-print("Resultado:", resultado.strip())
+print(resultado)
 
 # ▶️ Como rodar este código:
 # 1. Requer instalar Python:
@@ -49,9 +55,9 @@ print("Resultado:", resultado.strip())
 # 3. Abra o terminal integrado pressionando `Ctrl + `` (Ctrl + acento grave) ou indo em `Terminal` > `Novo Terminal`
 #    geralmente encontrado na parte superior da tela. Certifique-se que o terminal está definido para Python
 #    (e não PowerShell por exemplo...)
-# 4. Navegue até o diretório onde o arquivo `repet_txt.py` está localizado usando o comando `cd`.
+# 4. Navegue até o diretório onde o arquivo `par_impar.py` está localizado usando o comando `cd`.
 #    Exemplo: cd C:/Users/usuário/OneDrive/Desktop
 # 5. Execute o código Python usando o comando `python` seguido do nome do arquivo.
-#    Exemplo: python repet_txt.py
-# 6. Interaja com o programa inserindo uma string e um número inteiro quando solicitado.
+#    Exemplo: python par_impar.py
+# 6. Interaja com o programa inserindo um número inteiro quando solicitado.
 # 7. Veja o resultado exibido no console.
